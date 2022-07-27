@@ -19,6 +19,26 @@ export default {
       builder: '@storybook/builder-webpack5',
     },
   },
+  'nextjs/default-js': {
+    name: 'Next.js (Javascript)',
+    script: 'npx create-next-app .',
+    cadence: ['ci', 'daily', 'weekly'],
+    expected: {
+      framework: '@storybook/nextjs',
+      renderer: '@storybook/react',
+      builder: '@storybook/builder-webpack5',
+    },
+  },
+  'nextjs/default-ts': {
+    name: 'Next.js (Javascript)',
+    script: 'npx create-next-app . --typescript',
+    cadence: ['ci', 'daily', 'weekly'],
+    expected: {
+      framework: '@storybook/nextjs',
+      renderer: '@storybook/react',
+      builder: '@storybook/builder-webpack5',
+    },
+  },
   // FIXME: missing documentation.json
   // 'angular/latest': {
   //   name: 'Angular (latest)',
